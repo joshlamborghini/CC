@@ -16,49 +16,146 @@
 	
 	
 	
-	<script src="js/ie-emulation-modes-warning.js"></script>
+<!-- 	<script src="js/ie-emulation-modes-warning.js"></script> -->
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.4.min.js" type="text/javascript"></script>
 
 </head>
 
 <body>
-	<div id="wrapper">
-		
+
+<div id="header">
+	<a id="home" 			href='#home'><span>HOME </span></a>
+	<a id="schedule" 		href='#schedule'><span>SCHEDULE </span></a>
+	<a id="details"			href='#details'><span>RACE DETAILS </span></a>
+	<a id="sponsors" 		href='#sponsors'><span>SPONSORS </span></a>
+	<a id="donate" 			href='#donate'><span>DONATE </span></a>
+</div>
+
+	<div id="wrapper">	
+	
 		<div id="right">
 			<div id="rightlogo"></div>
 			<div id="intro">
 						CAPE CRUSADE
 						<br>
-						<h2>Join the Race</h2>
-						<br>
+						<h2>Join the Race</h2> 
+						<ul>
+							<li><a id="home" 			href='#home'><span>HOME</span></a></li>
+	            			<li><a id="schedule" 		href='#schedule'><span>SCHEDULE</span></a></li>
+				            <li><a id="details"			href='#details'><span>RACE DETAILS</span></a>
+				            <li><a id="sponsors" 		href='#sponsors'><span>SPONSORS</span></a></li>
+				            <li><a id="donate" 			href='#donate'><span>DONATE</span></a></li>
+						</ul>
 						<h3>MAY 30,31 OR</h3>
 						<h3>JUNE 6,7 2015</h3>
 						<br>
-						<iframe src="//player.vimeo.com/video/117349427?title=0&byline=0&portrait=0" width="400" height="226" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>		
 		</div>
 		
+		<div id="left"></div>
 		
-		<div id="left">
-			<div id="leftlogo"></div>
-		</div>
-	
 	</div>
-    
+	
+<!-- Auto Load Home	 -->
+ 	<script type="text/javascript">
+			$('#left').load('home.html') 
+	</script>
+	
+	<script type="text/javascript">
+	if (screen.width < 768) {
+	    $(document).ready(function(){
+	       $("#home").click(function(){
+	        $('#left').load('home.html');
+	         
+	       }); 
+	
+	       $("#schedule").click(function(){
+	        $('#left').load('schedule.html');
+	         
+	       });
+	       
+	       $("#details").click(function(){
+		        $('#left').load('details.html');
+		         
+		       });
+	       
+	       $("#sponsors").click(function(){
+		        $('#left').load('sponsors.html');
+		         
+		       });
+	       
+	       $("#donate").click(function(){
+		        $('#left').load('donate.html');
+		         
+		       });
+	     });
+	}
+	else {
+		$(document).ready(function(){
+		       $("#home").click(function(){
+		        $('#wrapper').load('home.html');
+		         
+		       }); 
+		
+		       $("#schedule").click(function(){
+		        $('#wrapper').load('schedule.html');
+		         
+		       });
+		       
+		       $("#details").click(function(){
+		        $('#wrapper').load('details.html');
+		         
+		       });
+		       
+		       $("#sponsors").click(function(){
+		        $('#wrapper').load('sponsors.html');
+		         
+		       });
+		       
+		       $("#donate").click(function(){
+		        $('#wrapper').load('donate.html');
+		         
+		       });
+		     });
+	}
+	</script>
+	
+	<script type="text/javascript">
+	if (screen.width > 768) {		
+		$('#left').load('home.html')
+	}
+	</script>
+	
+	
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : 'your-app-id',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
 
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
  
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>    
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <!-- 
 	<script src="http://code.jquery.com/jquery-1.4.min.js" type="text/javascript"></script>
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
   	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 	<script src="script.js"></script>
-	 -->
+	
 
 </body>
 </html>

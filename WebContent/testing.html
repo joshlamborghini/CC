@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!-- Auto Load Home	 -->
+ 	<script type="text/javascript"> -->
+			$('#left').load('home.html') 
+	</script> --> 
+	
+
+<!-- Auto Load Home	 -->    
+<script type="text/javascript">
+	    $(document).ready(function(){
+	       $("#home").click(function(){
+	        $('#left').load('home.html');
+	         
+	       }); 
+	
+	       $("#mission").click(function(){
+	        $('#content').load('mission.html');
+	         
+	       });
+	       
+	       $("#details").click(function(){
+		        $('#content').load('details.html');
+		         
+		       });
+	       
+	       $("#sponsors").click(function(){
+		        $('#content').load('sponsors.html');
+		         
+		       });
+	     });
+	</script>
