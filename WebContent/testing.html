@@ -14,28 +14,69 @@
 			$('#left').load('home.html') 
 	</script> --> 
 	
+	
+		<script type="text/javascript">
+	if (screen.width > 768) {		
+		$('#left').load('home.html')
+	}
+	</script>
+	
 
 <!-- Auto Load Home	 -->    
-<script type="text/javascript">
+if (screen.width > 768) {
 	    $(document).ready(function(){
 	       $("#home").click(function(){
 	        $('#left').load('home.html');
 	         
 	       }); 
 	
-	       $("#mission").click(function(){
-	        $('#content').load('mission.html');
+	       $("#schedule").click(function(){
+	        $('#left').load('schedule.html');
 	         
 	       });
 	       
 	       $("#details").click(function(){
-		        $('#content').load('details.html');
+		        $('#left').load('details.html');
 		         
 		       });
 	       
 	       $("#sponsors").click(function(){
-		        $('#content').load('sponsors.html');
+		        $('#left').load('sponsors.html');
+		         
+		       });
+	       
+	       $("#donate").click(function(){
+		        $('#left').load('donate.html');
 		         
 		       });
 	     });
+	}
+	else {
+		$(document).ready(function(){
+		       $("#home").click(function(){
+		        $('#wrapper').load('home.html');
+		         
+		       }); 
+		
+		       $("#schedule").click(function(){
+		        $('#wrapper').load('schedule.html');
+		         
+		       });
+		       
+		       $("#details").click(function(){
+		        $('#wrapper').load('details.html');
+		         
+		       });
+		       
+		       $("#sponsors").click(function(){
+		        $('#wrapper').load('sponsors.html');
+		         
+		       });
+		       
+		       $("#donate").click(function(){
+		        $('#wrapper').load('donate.html');
+		         
+		       });
+		     });
+	}
 	</script>
